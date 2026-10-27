@@ -1,0 +1,6 @@
+# Deploys happen only from GitHub Actions (after tests and build pass) via `netlify deploy`.
+# The Netlify site is not linked to the Git repo; this ignore command is a safeguard that
+# cancels any Netlify-side Git build if the repo is ever linked.
+[build]
+  publish = "dist"
+  ignore = "exit 0"
